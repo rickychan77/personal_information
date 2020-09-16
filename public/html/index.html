@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html style="overflow: hidden;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>test</title>
+</head>
+<body>
+    <input id="uid">
+    <input id="name">
+    <input id="sex">
+    <input id="age">
+    <input id="tel">
+    <button onclick='tianjia()'>确定</button>
+
+    <script src="../javascripts/jq.js"></script>
+    <script src=></script>
+    <script>
+        // function tianjia(){
+        //     var a = $("#uid").val();
+        //     var b = $("#name").val();
+        //     var c = $("#sex").val();
+        //     var d = $("#age").val();
+        //     var e = $("#tel").val();
+            $.ajax({
+                type:'get',
+                url:'http://localhost:3000/users/selectAll',
+                dataType:'jsonp',
+                success:function(data){
+                  console.log(JSON.stringify(data));
+                },
+                error:function(data){
+                  console.log(data);
+                }
+            })
+        // }
+    </script>
+</body>
+
+</html>
